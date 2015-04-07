@@ -14,6 +14,7 @@ class PersosController < ApplicationController
   def create
     @perso = Perso.new(perso_params)
     @perso.save
+    redirect_to perso_path(@perso)
   end
 
   def destroy
@@ -32,6 +33,7 @@ class PersosController < ApplicationController
       :skills,
       :buddy,
       :buddy_name,
+      :human,
       :picture)
   end
 end

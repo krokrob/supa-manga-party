@@ -12,10 +12,16 @@
       <div id="banner">
         <h1>Welcome to the Supa Manga Party app!</h1>
 
-        <h2>Prêt à ajouter votre personnage à la liste des invités ?</h2>
-
+        <h2>Prêt à ajouter votre personnage à la
+          <% if @persos.size >= 5 %>
+           <%= link_to("liste des invités", persos_path) %>
+          <% else %>
+          liste des invités
+          <% end %>
+           ?
+        </h2>
         <div class="sm-padded">
-          <%= link_to new_persos_path do %>
+          <%= link_to new_perso_path do %>
             <button class="btn btn-lg btn-warning">ADD!</button>
           <% end %>
         </div>

@@ -1,8 +1,8 @@
 /* -------------------------------------
  * Colors & Fonts
  * ------------------------------------- */
-$navbar-color: $gray-light;
-$navbar-hover-color: $yellow;
+$navbar-color: $gray-darker;
+$navbar-hover-color: $gray;
 $navbar-font-family: $navbar-font;
 $navbar-font-size: 14px;
 $navbar-text-transform: capitalize;
@@ -17,14 +17,14 @@ $navbar-bg: white;
 $navbar-height: 50px;
 $navbar-vertical-padding: 10px;
 $navbar-horizontal-padding: 20px;
-$navbar-border-bottom-width: 1px;
+$navbar-border-bottom-width: 0px;
 $navbar-border-bottom-color: $gray-lighter;
 
 /* -------------------------------------
  * Navbar button
  * ------------------------------------- */
 $navbar-btn-height: 40px;
-$navbar-btn-bg: lightgrey;
+$navbar-btn-bg: $orange;
 $navbar-btn-color: white;
 $navbar-btn-horizontal-padding: 10px;
 $navbar-btn-radius: 2px;
@@ -39,8 +39,11 @@ $navbar-profile-border-width: 2px;
 /* -------------------------------------
  * SCSS code
  * ------------------------------------- */
+ .navbar-transparent {
+     background-color:transparent;
+ }
 .navbar-wagon {
-  background: $navbar-bg;
+  // background: $navbar-bg;
   font-family: $navbar-font-family;
   border: none;
   font-size: $navbar-font-size;

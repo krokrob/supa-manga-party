@@ -1,2 +1,16 @@
-<h1>Persos#show</h1>
-<p>Find me in app/views/persos/show.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2 well">
+      <h1><%= @perso.fullname %></h1>
+      <p>Tout droit sorti du manga <%= @perso.manga %>, <%= @perso.fullname %> a <%= @perso.age %> ans et est <%= @perso.profession.downcase %>.</p>
+      <% if @perso.human %>
+        <p>Ses capacités vont bien au-delà de celle d'un humain ordinaire. <%= @perso.skills %>.</p>
+      <% else %>
+        <p>N'étant pas humain, ses capacités sont bien-sûr extraordianires. <%= @perso.skills %>.</p>
+      <% end %>
+      <% if @perso.buddy %>
+        <p>Son acolyte <%= @perso.buddy_name %> est comme son ombre.</p>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,2 +1,24 @@
-<h1>Persos#new</h1>
-<p>Find me in app/views/persos/new.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3 well">
+      <h1>Crée ton personnage</h1>
+      <%= simple_form_for(@perso, url: persos_path, html: {multipart: true}) do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :fullname %>
+        <%= f.input :manga %>
+        <%= f.input :age %>
+        <%= f.input :profession %>
+        <%= f.input :skills %>
+        <div class="text-center">
+          <%= f.input :human, hint: "coche la case si ton personnage est un humain" %>
+          <%= f.input :buddy, hint: "coche la case si ton personnage vient avec un pote" %>
+        </div>
+        <%= f.input :buddy_name %>
+        <div class="text-center">
+          <%= f.submit "CREER !", class:"btn btn-warning" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
