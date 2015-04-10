@@ -22,19 +22,6 @@ class PersosController < ApplicationController
     @perso.destroy
   end
 
-  # def choose_picture
-  #   @perso = current_user.perso
-  #   picture_search = "https://www.google.fr/search?q=#{@perso.fullname}+#{@perso.manga}+images"
-  #   target_pictures = []
-
-  #   html_file = open(picture_search)
-  #   html_doc = Nokogiri::HTML(html_file)
-
-  #   html_doc.search('.rg_ul').each do |element|
-  #     target_pictures << element.
-  #   end
-  # end
-
   private
 
   def perso_params
