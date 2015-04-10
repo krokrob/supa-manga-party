@@ -5,7 +5,14 @@
       <div class="row">
         <% @persos.each do |perso| %>
           <div class="col-sm-4 sm-padded">
-            <%= link_to perso.fullname, perso_path(perso), class:"btn btn-warning" %>
+            <div class="col-sm-12">
+              <%= link_to perso_path(perso) do %>
+                <%= image_tag perso.picture_link, width: "80%" %>
+              <% end %>
+            </div>
+            <div class="col-sm-12">
+              <%= link_to perso.fullname, perso_path(perso), class:"btn btn-warning" %>
+            </div>
           </div>
         <% end %>
       </div>
