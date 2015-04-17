@@ -3,11 +3,15 @@
  * These are examples of utilities classes
  * Feel free to change them and create your own
  * ------------------------------------- */
+.image-perso {
+  width: "80%";
+  max-height: 400px;
+}
+
 .sm-padded {
   padding-top: 2em;
   padding-bottom: 2em;
 }
-
 .padded {
   padding-top: 8em;
   padding-bottom: 8em;
