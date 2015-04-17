@@ -5,9 +5,9 @@
       <div class="row">
         <% @persos.each do |perso| %>
           <div class="col-sm-4 sm-padded">
-            <div class="col-sm-12">
+            <div class="col-sm-12 images-perso">
               <%= link_to perso_path(perso) do %>
-                <%= image_tag perso.picture_link, class:'image-perso' %>
+                <%= image_tag perso.picture_link, width:'80%' %>
               <% end %>
             </div>
             <div class="col-sm-12">
